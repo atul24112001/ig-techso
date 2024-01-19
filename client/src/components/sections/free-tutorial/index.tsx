@@ -1,8 +1,46 @@
 import React, { useState } from "react";
 import MapIcon from "../../../assets/icons/map";
 import Button from "../../helper/Button";
-import { tutorials } from "../tutorials";
+// import { tutorials } from "../tutorials";
 import TutorialCard from "../tutorials/component/TutorialCard";
+import review1 from "../../../assets/images/review-1.png";
+import review2 from "../../../assets/images/review-2.png";
+import review3 from "../../../assets/images/review-3.png";
+
+const tutorials = [
+  {
+    _id: "1",
+    title: "How to work with prototype design with adobe xd featuring tools",
+    totalReviews: 343,
+    rating: 5.0,
+    numberOfStudentsWatched: 1249,
+    image: review1,
+  },
+  {
+    _id: "2",
+    title: "How to work with prototype design with adobe xd featuring tools",
+    totalReviews: 343,
+    rating: 4.5,
+    numberOfStudentsWatched: 1249,
+    image: review2,
+  },
+  {
+    _id: "3",
+    title: "How to work with prototype design with adobe xd featuring tools",
+    totalReviews: 343,
+    rating: 4,
+    numberOfStudentsWatched: 1249,
+    image: review3,
+  },
+  {
+    _id: "4",
+    title: "How to work with prototype design with adobe xd featuring tools",
+    totalReviews: 343,
+    rating: 4,
+    numberOfStudentsWatched: 1249,
+    image: review3,
+  },
+];
 
 type Props = {
   id?: string;
@@ -35,7 +73,7 @@ const FreeTutorial = React.forwardRef<HTMLElement, Props>(({ id }, ref) => {
                 >
                   <TutorialCard
                     width="250px"
-                    key={tutorial.id}
+                    key={tutorial._id}
                     details={tutorial}
                   />
                 </div>

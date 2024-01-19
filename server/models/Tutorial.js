@@ -5,6 +5,7 @@ const TutorialSchema = new mongoose.Schema({
     rating: Number,
     title: String,
     numberOfStudentsWatched: Number,
+    totalReviews: Number
 });
 
 const Tutorial = mongoose.model("tutorials", TutorialSchema);

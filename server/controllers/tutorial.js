@@ -17,13 +17,14 @@ export const getTutorials = async (req, res) => {
 
 export const addTutorials = async (req, res) => {
     try {
-        const { imageUrl, title, rating, numberOfStudentsWatched } = req.body;
+        const { imageUrl, title, rating, numberOfStudentsWatched, totalReviews } = req.body;
 
         const newTutorial = await Tutorial.create({
             image: imageUrl,
             numberOfStudentsWatched,
             rating,
-            title
+            title,
+            totalReviews
         })
 
         res.status(201).json({

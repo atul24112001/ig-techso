@@ -1,10 +1,10 @@
 type TutorialType = {
-  id: number;
-  title: string;
+  _id: string;
   totalReviews: number;
-  review: number;
+  image: string;
+  rating: number;
+  title: string;
   numberOfStudentsWatched: number;
-  thumbnail: string;
 };
 
 type CourseType = {

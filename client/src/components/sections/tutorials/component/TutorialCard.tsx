@@ -9,7 +9,7 @@ type Props = {
 export default function TutorialCard({ details, width }: Props) {
   const stars = useMemo(() => {
     const arr: boolean[] = [];
-    const rounded = Math.floor(details.review);
+    const rounded = Math.floor(details.rating);
     for (let i = 1; i <= 5; i++) {
       if (rounded >= i) {
         arr.push(true);
@@ -27,7 +27,7 @@ export default function TutorialCard({ details, width }: Props) {
       }}
       className="flex-shrink-0 bg-white hover:scale-105 transition-all duration-300 rounded-[10px] border-[1px] border-solid border-[#F3F4F5]"
     >
-      <img className="" src={details.thumbnail} alt={`${details.id}`} />
+      <img className="" src={details.image} alt={`${details._id}`} />
       <div className="py-4 px-4">
         <div className="flex items-center gap-2">
           <div className="flex">
@@ -39,7 +39,7 @@ export default function TutorialCard({ details, width }: Props) {
             })}
           </div>
           <div className="text-[15px] font-normal text-[#0F2137]">
-            {details.review}
+            {details.rating}
           </div>
           <div className="text-[15px] font-normal text-[#0F2137]">
             ({details.totalReviews} Reviews)
